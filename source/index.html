@@ -2,29 +2,79 @@
 <html class="page" lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Drink2Go Фадеева Виктория</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="preload" href="#" type="font/woff2" as="font">
-    <link rel="stylesheet" href="styles/styles.css">
-    <script src="scripts/index.js" defer></script>
+  <meta charset="UTF-8">
+  <title>Drink2Go Фадеева Виктория</title>
+  <meta name="author" content="Фадеева Виктория">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="preload" href="#" type="font/woff2" as="font">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="preload" href="styles/styles.css" as="style">
+  <script src="scripts/index.js" defer></script>
 </head>
 
 <body class="page__body">
-    <header data-test="header">
-    </header>
-    <main>
-        <section data-test="hero">
-        </section>
-        <section data-test="features">
-        </section>
-        <section data-test="catalog">
-        </section>
-        <section data-test="map">
-        </section>
-    </main>
-    <footer data-test="footer">
-    </footer>
+  <header class="main-header" data-test="header">
+    <div class="main-header__container">
+      <a class="main-header__logo" href="index.html">
+        <picture>
+          <source media="(min-width: 1440px)" width="170" height="36" type="image/svg+xml"
+            srcset="images/logo-desktop.svg">
+          <source media="(min-width: 768px)" width="82" height="36" type="image/svg+xml"
+            srcset="images/logo-tablet.svg">
+          <img class="main-header__logo-image" src="images/logo-mobile.svg" width="32" height="36"
+            alt="Логотип Проекта Drink2Go">
+        </picture>
+        <span class="main-header__logo-text">Интернет-магазин кофейных напитков</span>
+      </a>
+      <nav class="main-header__nav main-nav main-nav--closed main-nav--nojs">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a class="site-list__link site-list__link--active" href="index.html">
+              главная
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">
+              каталог
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">
+              доставка
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">
+              о нас
+            </a>
+          </li>
+        </ul>
+        <div class="main-nav__user-list user-list">
+          <a class="user-list__icon user-list__icon--login" href="#">
+            <span class="user-list__text">войти</span>
+          </a>
+          <a class="user-list__icon user-list__icon--union" href="#">
+            <span class="user-list__text">корзина</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section data-test="hero">
+    </section>
+    <section data-test="features">
+    </section>
+    <section data-test="catalog">
+    </section>
+    <section data-test="map">
+    </section>
+  </main>
+  <footer data-test="footer">
+  </footer>
 </body>
 
 </html>
