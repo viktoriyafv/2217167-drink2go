@@ -20,17 +20,30 @@
 
 .main-nav__toggle {
   position: absolute;
-  top: 22px;
-  right: 22px;
+  top: 0;
+  right: 0;
   z-index: 2;
   display: block;
-  width: 16px;
-  height: 16px;
-  background-color: $basic-black;
-  mask-image: url("../../icons/menu-button.svg");
+  width: 60px;
+  height: 60px;
+  background-color: #ffffff;
   cursor: pointer;
   border: none;
   padding: 0;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: $basic-black;
+    mask-image: url("../../icons/menu-button.svg");
+    mask-size: 16px 16px;
+    mask-position: center;
+    cursor: pointer;
+    mask-repeat: no-repeat;
+    background-color: $basic-black;
+  }
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -42,7 +55,9 @@
   }
 
   &:active {
-    opacity: 0.3;
+    background-color: $secondary-color;
+    color: $basic-black;
+    opacity: 1;
   }
 
   &:disabled {
@@ -73,7 +88,7 @@
   .main-nav--opened .main-nav__list {
     position: absolute;
     display: block;
-    top: 65px;
+    top: 60px;
     border-top: 1px solid $secondary-color;
     left: 0;
     z-index: 10;
@@ -82,13 +97,7 @@
     background-color: #ffffff;
   }
 
-  .main-nav--opened .main-nav__toggle {
+  .main-nav--opened .main-nav__toggle::before {
     mask-image: url("../../icons/close-button.svg");
-    mask-size: 16px 16px;
-    mask-repeat: no-repeat;
-    mask-position: 50% 50%;
-    width: 20px;
-    height: 21px;
-    right: 20px;
   }
 }

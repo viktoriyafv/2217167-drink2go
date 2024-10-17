@@ -9,7 +9,6 @@
     display: block;
     font-family: $primary-font;
     font-weight: 500;
-    color: $basic-black;
     font-size: 12px;
     line-height: 16px;
     text-transform: uppercase;
@@ -20,8 +19,9 @@
 
 .user-list__icon {
   position: relative;
+  color: $basic-black;
   width: 60px;
-  height: 36px;
+  height: 60px;
 
   @media (min-width: $desktop-width) {
     width: 112px;
@@ -30,13 +30,31 @@
     &--union {
       width: 129px;
     }
+
+    &:hover,
+    &:focus-visible {
+      color: $primary-color;
+
+      &::before {
+        background-color: $primary-color;
+      }
+    }
+
+    &:active {
+      background-color: $secondary-color;
+      color: $primary-color;
+
+      &::before {
+        background-color: $primary-color;
+      }
+    }
   }
 
   &::before {
     content: "";
     display: block;
     width: 60px;
-    height: 36px;
+    height: 60px;
     position: absolute;
     mask-repeat: no-repeat;
     mask-position: 50% 50%;
