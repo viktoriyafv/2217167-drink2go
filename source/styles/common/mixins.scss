@@ -31,3 +31,17 @@
   align-items: center;
   flex-wrap: wrap;
 }
+
+@mixin icon {
+  content: "";
+    display: none;
+    top: 2;
+    left: 0;
+    width: 13px;
+    height: 16px;
+    position: absolute;
+    mask-repeat: no-repeat;
+    mask-size: 13px 16px;
+    background-color: $primary-color;
+    display: block;
+}
