@@ -19,10 +19,7 @@
 }
 
 .main-nav__toggle {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 2;
+  position: relative;
   display: block;
   width: 60px;
   height: 60px;
@@ -34,6 +31,9 @@
   &::before {
     content: "";
     display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
     width: 60px;
     height: 60px;
     background-color: $basic-black;
