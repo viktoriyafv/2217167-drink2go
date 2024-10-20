@@ -1,0 +1,111 @@
+.filter__list {
+  @include reset;
+}
+
+.filter__item {
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 24px;
+  position: relative;
+  display: block;
+  padding-left: 36px;
+  cursor: pointer;
+  margin-bottom: 20px;
+
+  &--country {
+    padding-left: 52px;
+  }
+}
+
+.filter__mark-milk {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border: 2px solid $basic-grey;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.filter__input-milk[type="radio"]:checked+.filter__mark-milk {
+  border: 2px solid $primary-color;
+}
+
+.filter__input-milk[type="radio"]:checked+.filter__mark-milk::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 16px;
+  height: 16px;
+  background-color: $primary-color;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.filter__input-milk[type="radio"]:disabled+.filter__mark-milk {
+  border: 2px solid $light-grey;
+}
+
+.filter__input-milk[type="radio"]:disabled+.filter__label-milk {
+  color: $light-grey;
+}
+
+.filter__mark-country {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 42px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: $basic-grey;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 2;
+    margin: auto;
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    z-index: 1;
+  }
+}
+
+.filter__input-country[type="checkbox"]:checked+.filter__mark-country {
+  background-color: $primary-color;
+}
+
+.filter__input-country[type="checkbox"]:checked+.filter__mark-country::before {
+  left: auto;
+  right: 2;
+}
+
+.filter__input-country[type="checkbox"]:disabled+.filter__mark-country {
+  background-color: $light-grey;
+}
+
+.filter__input-country[type="checkbox"]:disabled+.filter__label-country {
+  color: $light-grey;
+}
+
+.filter__button {
+  width: 280px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+
+  &--reset {
+    background-color: #ffffff;
+    color: $primary-color;
+    margin-bottom: 40px;
+  }
+}

@@ -156,11 +156,6 @@
 }
 
 .slider__badge {
-  color: $primary-color;
-  font-weight: 700;
-  font-size: 12px;
-  text-transform: uppercase;
-  line-height: 16px;
   margin-bottom: 4px;
 }
 
@@ -221,5 +216,16 @@
 }
 
 .slider__pagination {
+  @include reset-list;
   display: none;
+
+  @media (min-width: $desktop-width) {
+    @include flex-between;
+    width: 202px;
+    position: absolute;
+    bottom: 60;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
 }
