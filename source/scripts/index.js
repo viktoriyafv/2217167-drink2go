@@ -44,3 +44,48 @@ function updateSlider() {
 
 // Инициализация слайдера
 updateSlider();
+
+/*function createPaginations() {
+  const itemsPerPage = 3;
+  let currentPage = 0;
+  const totalPages = Math.ceil(slides.length / itemsPerPage);
+  const paginationContainer = document.createElement('ol');
+  const paginationDiv = slider.appendChild(paginationContainer);
+  paginationContainer.classList.add('slider__pagination');
+
+  for (let i = 0; i < totalPages; i++) {
+    const pageButton = document.createElement('button');
+    pageButton.classList.add('slider-pagination__button');
+    pageButton.addEventListener('click', () => {
+      currentPage = i;
+      showPage(currentPage);
+      updateActiveButtonStates();
+    });
+
+    slider.appendChild(paginationContainer);
+    paginationDiv.appendChild(pageButton);
+  }
+
+  function updateActiveButtonStates() {
+    const pageButtons = document.querySelectorAll('.slider-pagination__button button');
+    pageButtons.forEach((button, index) => {
+      if (index === currentPage) {
+        button.classList.add('slider-pagination__button--current');
+      } else {
+        button.classList.remove('slider-pagination__button--current');
+      }
+    });
+  }
+
+  function showPage(page) {
+    const startIndex = page * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    slides.forEach((item, index) => {
+      item.classList.toggle('visiully-hidden', index < startIndex || index >= endIndex);
+    });
+    updateActiveButtonStates();
+  }
+}
+
+createPaginations();
+*/
