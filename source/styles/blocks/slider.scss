@@ -56,10 +56,10 @@
 .slider__description-wrapper {
   font-family: $primary-font;
   text-align: center;
-  padding: 310px 20px 60px;
+  padding: 307px 20px 60px;
 
   @media (min-width: $tablet-width) {
-    padding: 60px 80px 308px;
+    padding: 58px 80px 308px;
   }
 
   @media (min-width: $desktop-width) {
@@ -95,7 +95,7 @@
     display: block;
     width: 11px;
     height: 20px;
-    top: 50%;
+    top: calc(50% - 10px);
     position: absolute;
     background-color: $primary-color;
 
@@ -155,14 +155,11 @@
   }
 }
 
-.slider__badge {
-  margin-bottom: 4px;
-}
-
 .slider__heading {
   @include reset;
   font-size: 36px;
   line-height: 48px;
+  margin-top: 4px;
   margin-bottom: 10px;
 
   @media (min-width: $tablet-width) {

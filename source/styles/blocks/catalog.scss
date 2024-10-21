@@ -4,23 +4,47 @@
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+
+  @media (min-width: $tablet-width) {
+    width: 281px;
+    margin-left: auto;
+    margin-bottom: 26px;
+  }
 }
 
 .catalog__select {
   display: block;
   background-color: inherit;
-  width: 165px;
+  width: 162px;
   font-family: $primary-font;
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
   color: $primary-color;
   border: none;
-  padding: 4px 30px 4px 10px;
+  padding: 4px 27px 4px 10px;
   appearance: none;
   background-image: url("../../icons/select-icon.svg");
-  background-position: right 10px center;
+  background-position: right 7px center;
   background-size: 10px 6px;
   background-repeat: no-repeat;
+}
+
+.catalog__select-legend {
+  @include reset;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600px;
+}
+
+.catalog__product-list {
+  @include flex-between;
+  @include reset-list;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
 }

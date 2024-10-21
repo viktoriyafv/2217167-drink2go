@@ -14,7 +14,7 @@
   border-bottom: 1px solid $secondary-color;
 
   @media (min-width: $tablet-width) {
-    padding: 42px 20px 30px;
+    padding: 40px 20px 30px;
     border: none;
   }
 
@@ -28,7 +28,7 @@
 .main-footer__wrapper {
   @include flex-between;
   width: 320px;
-  padding: 22px 20px;
+  padding: 20px 20px;
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
@@ -43,15 +43,14 @@
 }
 
 .main-footer__nav {
+  margin: 0 auto;
+
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 42px 20px 30px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 0;
+    padding: 0 20px;
+    margin-bottom: 40px;
   }
 }
 

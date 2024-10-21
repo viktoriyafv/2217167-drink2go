@@ -4,9 +4,24 @@
 }
 
 .form__legend {
+  @include reset;
   font-family: $primary-font;
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+
+  &--milk {
+    margin-bottom: 20px;
+  }
+
+  &--country {
+    margin-bottom: 20px;
+  }
+}
+
+.form__filter {
+  @media (min-width: $tablet-width) {
+    width: 222px;
+  }
 }

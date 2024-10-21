@@ -23,7 +23,7 @@
     position: absolute;
 
     @media (min-width: $tablet-width) {
-      left: 10;
+      left: 0;
       right: auto;
     }
 
@@ -55,7 +55,7 @@
     line-height: 36px;
     text-align: start;
     padding-top: 0;
-    padding-left: 76px;
+    padding-left: 74px;
     margin-bottom: 10px;
   }
 

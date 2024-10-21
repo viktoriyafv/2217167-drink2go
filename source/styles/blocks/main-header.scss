@@ -1,13 +1,12 @@
 .main-header__container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  @include flex;
   padding-left: 20px;
   width: 320px;
   margin: 0 auto;
 
 
   @media (min-width: $tablet-width) {
+    justify-content: space-between;
     width: 768px;
     padding: 0 20px;
   }
