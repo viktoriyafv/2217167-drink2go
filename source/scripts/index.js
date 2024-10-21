@@ -1,4 +1,5 @@
-/* в этот файл добавляет скрипты*/
+// открытие и закрытие меню
+
 const navMain = document.querySelector('.main-nav');
 const navToggle = document.querySelector('.main-nav__toggle');
 
@@ -7,6 +8,8 @@ navMain.classList.remove('main-nav--nojs');
 navToggle.onclick = function () {
   navMain.classList.toggle('main-nav--opened');
 };
+
+//слайдер
 
 const slider = document.querySelector('.slider__list');
 const prevButton = document.querySelector('.slider-button-prev');
@@ -45,47 +48,46 @@ function updateSlider() {
 // Инициализация слайдера
 updateSlider();
 
-/*function createPaginations() {
-  const itemsPerPage = 3;
-  let currentPage = 0;
-  const totalPages = Math.ceil(slides.length / itemsPerPage);
-  const paginationContainer = document.createElement('ol');
-  const paginationDiv = slider.appendChild(paginationContainer);
-  paginationContainer.classList.add('slider__pagination');
+// Scroll - RangeScale
 
-  for (let i = 0; i < totalPages; i++) {
-    const pageButton = document.createElement('button');
-    pageButton.classList.add('slider-pagination__button');
-    pageButton.addEventListener('click', () => {
-      currentPage = i;
-      showPage(currentPage);
-      updateActiveButtonStates();
-    });
+const select = document.querySelector('.range__field--min');
+const rangeScale = document.querySelector('.range__slider');
+const inputNumber = document.querySelector('.range-field--max');
 
-    slider.appendChild(paginationContainer);
-    paginationDiv.appendChild(pageButton);
-  }
-
-  function updateActiveButtonStates() {
-    const pageButtons = document.querySelectorAll('.slider-pagination__button button');
-    pageButtons.forEach((button, index) => {
-      if (index === currentPage) {
-        button.classList.add('slider-pagination__button--current');
-      } else {
-        button.classList.remove('slider-pagination__button--current');
+noUiSlider.create(rangeScale, {
+  start: [0, 900],
+  connect: true,
+  range: {
+    'min': 0,
+    'max': 1000
+  },
+  format: {
+    to: function (value) {
+      if (Number.isInteger(value)) {
+        return value.toFixed(0);
       }
-    });
-  }
+      return value.toFixed(0);
+    },
+    from: function (value) {
+      return parseFloat(value);
+    },
+  },
+  cssPrefix: 'noui-', // defaults to 'noUi-',
+});
 
-  function showPage(page) {
-    const startIndex = page * itemsPerPage;
-    const endIndex = startIndex + itemsPerPage;
-    slides.forEach((item, index) => {
-      item.classList.toggle('visiully-hidden', index < startIndex || index >= endIndex);
-    });
-    updateActiveButtonStates();
+rangeScale.noUiSlider.on('update', (values, handle) => {
+  const value = values[handle];
+  if (handle) {
+    inputNumber.value = value;
+  } else {
+    select.value = value;
   }
-}
+});
 
-createPaginations();
-*/
+select.addEventListener('change', function () {
+  rangeScale.noUiSlider.set([this.value, null]);
+});
+
+inputNumber.addEventListener('change', function () {
+  rangeScale.noUiSlider.set([null, this.value]);
+});

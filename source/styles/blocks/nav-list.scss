@@ -18,10 +18,16 @@
   }
 
   &--adress {
+    width: 260px;
     font-size: 14px;
     line-height: 20px;
     text-transform: none;
     padding-left: 19px;
+    margin: 0;
+
+    @media (min-width: $tablet-width) {
+      width: 100%;
+    }
   }
 
   &--adress::before {
@@ -43,18 +49,25 @@
 }
 
 .nav-list__item {
-  padding: 0 20px 20px;
+  padding: 0 20px;
+  margin-bottom: 20px;
 
   &:last-child {
-    padding-bottom: 28px;
-
     @media (min-width: $tablet-width) {
-      padding-bottom: 0;
+      margin-bottom: 0;
     }
+  }
+
+  &--adress {
+   margin-bottom: 16px;
   }
 
   @media (min-width: $tablet-width) {
     padding: 0;
-    padding-bottom: 20px;
+    margin-bottom: 19px;
+
+    &--adress {
+      margin-bottom: 16px;
+     }
   }
 }

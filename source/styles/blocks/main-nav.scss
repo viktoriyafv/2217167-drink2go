@@ -10,6 +10,7 @@
 
   @media (min-width: $tablet-width) {
     @include flex-between;
+    width: 398px;
     margin-right: 60px;
   }
 

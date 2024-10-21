@@ -1,16 +1,15 @@
-.nav-footer {
-  margin: 0 auto;
-  @media (min-width: $desktop-width){
-    margin: 0;
-  }
-}
-
 .nav-footer__wrapper {
   border-bottom: 1px solid $secondary-color;
+  padding-bottom: 8px;
+
+  &--contacts {
+    padding-bottom: 0;
+  }
 
   @media (min-width: $tablet-width) {
     width: 223px;
     border: 0;
+    padding-bottom: 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -33,7 +32,7 @@
     width: 100%;
     margin: 0;
     padding: 0;
-    padding-bottom: 20px;
+    padding-bottom: 19px;
   }
 }
 

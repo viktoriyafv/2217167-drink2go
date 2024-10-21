@@ -7,39 +7,18 @@
 
 .range__bar {
   position: absolute;
-  left: 0;
+  width: 226px;
+  left: 1;
   height: 4px;
   background-color: $primary-light-color;
 }
 
-.range__scale-toggle {
-  position: absolute;
-  top: -12px;
-  left: 100%;
-  width: 24px;
-  height: 24px;
-  background-color: hsl(0deg, 0%, 100%);
-  border-radius: 50%;
-  border: 2px solid hsl(256deg, 76%, 68%);
-  outline: 0;
-  cursor: pointer;
-  padding: 0;
-  z-index: 1;
-
-  &--min {
-    left: 0;
-  }
-
-  &--max {
-    left: calc(100% - 9px);
-  }
-}
-
 .range__wrapper {
+  @include flex-between;
   position: relative;
-  display: flex;
-  margin-bottom: 24px;
-  margin-top: 24px;
+  width: 280px;
+  margin-top: 36px;
+  margin-bottom: 30px;
 
   &::before {
     position: absolute;
@@ -53,6 +32,11 @@
     background-color: $basic-grey;
     margin: auto;
   }
+
+  @media (min-width: $tablet-width) {
+    width: 223px;
+    margin-top: 31px;
+  }
 }
 
 .range__filter--min {
@@ -60,17 +44,21 @@
 }
 
 .range__field {
-  width: 100%;
+  display: block;
+  width: 118px;
   min-height: 40px;
   font-family: $primary-font;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
   text-align: center;
-  margin: 0;
   padding: 5px 10px;
   border: 2px solid hsl(256deg, 76%, 68%);
   border-radius: 4px;
   box-sizing: border-box;
   outline: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 87px;
+  }
 }

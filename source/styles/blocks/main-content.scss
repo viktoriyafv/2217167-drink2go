@@ -7,10 +7,18 @@
   color: $basic-black;
   margin-bottom: 36px;
 
+  &--catalog {
+    margin-bottom: 20px;
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 42px;
     line-height: 64px;
     margin-bottom: 60px;
+
+    &--catalog {
+      margin-bottom: 20px;
+    }
   }
 
   @media (min-width: $desktop-width) {
@@ -64,9 +72,29 @@
 .main-content__catalog {
   background-color: $bacground-light-grey;
   padding-top: 50px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 100px;
+  }
 }
 
 .main-content__wrapper {
   width: 320px;
   padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+  }
+}
+
+.main-content__form {
+  @media (min-width: $tablet-width) {
+    @include flex;
+    align-items: start;
+    gap: 30px;
+  }
 }
